@@ -8,6 +8,7 @@ eslint no-unused-vars: [
   }
 ]
 */
+//initializing
 
 const data = require('./data');
 

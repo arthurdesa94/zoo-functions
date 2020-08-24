@@ -8,16 +8,21 @@ eslint no-unused-vars: [
   }
 ]
 */
-//initializing
 
 const data = require('./data');
+const { animals, employees, hours, prices } = require('./data');
 
-function animalsByIds(ids) {
-  // seu código aqui
+function animalsByIds(...ids) {
+  if(ids === undefined) {
+    return undefined;
+  } else {
+    return animals.filter(specAnimalId => ids.includes(specAnimalId.id))
+    }
 }
+// const animalsByIds = (...ids) => animals.filter(animal => animal.id === ids || ids.includes(animal.id));
 
 function animalsOlderThan(animal, age) {
-  // seu código aqui
+  seu código aqui
 }
 
 function employeeByName(employeeName) {

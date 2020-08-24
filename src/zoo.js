@@ -22,7 +22,7 @@ function animalsByIds(...ids) {
 // const animalsByIds = (...ids) => animals.filter(animal => animal.id === ids || ids.includes(animal.id));
 
 function animalsOlderThan(animal, age) {
-  seu código aqui
+  // seu código aqui
 }
 
 function employeeByName(employeeName) {

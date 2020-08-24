@@ -16,7 +16,7 @@ function animalsByIds(...ids) {
   if(ids === undefined) {
     return undefined;
   } else {
-    return animals.filter(specAnimalId => ids.includes(specAnimalId.id))
+    return animals.filter(specAnimalId => ids.includes(specAnimalId.id));
     }
 }
 // const animalsByIds = (...ids) => animals.filter(animal => animal.id === ids || ids.includes(animal.id));

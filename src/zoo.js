@@ -16,9 +16,8 @@ function animalsByIds(...ids) {
   if (ids === undefined) {
     return undefined;
   }
-    return animals.filter(specAnimalId => ids.includes(specAnimalId.id));
+  return animals.filter(specAnimalId => ids.includes(specAnimalId.id));
 }
-// const animalsByIds = (...ids) => animals.filter(animal => animal.id === ids || ids.includes(animal.id));
 
 function animalsOlderThan(animal, age) {
   // seu código aqui

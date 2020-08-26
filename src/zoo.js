@@ -42,7 +42,7 @@ function isManager(id) {
 
 function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []) {
   data.employees// must have all keys from employees
-  .push({ id, firstName, lastName, managers, responsibleFor});
+  .push({ id, firstName, lastName, managers, responsibleFor });
 }
 
 function animalCount(species) {
@@ -55,7 +55,7 @@ function animalCount(species) {
     });
     return objAnimals;
   }
-  const animalFound = data.animals.find(animal => animal.name === species);
+  const animalFound = data.animals.find((animal) => animal.name === species);
   return animalFound.residents.length;
 }
 

@@ -73,13 +73,13 @@ function animalMap(options) {
 }
 
 function schedule(dayName) {
-  const objHour = {};
-  if (!dayName) {
-    Object.keys(data.hours).forEach(hour => response(hour, objHour));
-  } else {
-    response(dayName, objHour);
-  }
-  return result;
+  // const objHour = {};
+  // if (!dayName) {
+  //   Object.keys(data.hours).forEach(hour => response(hour, objHour));
+  // } else {
+  //   response(dayName, objHour);
+  // }
+  // return obj;
 }
 
 function oldestFromFirstSpecies(id) {

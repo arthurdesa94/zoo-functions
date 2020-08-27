@@ -74,7 +74,7 @@ function animalMap(options) {
 function schedule(dayName) {
   const objHour = {};
   if (!dayName) {
-    Object.keys(hours).forEach(hour => response(hour, objHour));
+    Object.keys(data.hours).forEach(hour => response(hour, objHour));
   } else {
     response(dayName, objHour);
   }
@@ -82,7 +82,7 @@ function schedule(dayName) {
 }
 
 function oldestFromFirstSpecies(id) {
-  // seu código aqui
+  const
 }
 
 function increasePrices(percentage) {

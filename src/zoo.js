@@ -126,8 +126,8 @@ function employeeCoverage(idOrName) {
     // [{}]
     filteredEmployees = data.employees
     .filter((employee) =>
-      employee.id === idOrName || 
-      employee.firstName === idOrName || 
+      employee.id === idOrName ||
+      employee.firstName === idOrName ||
       employee.lastName === idOrName
       );
     }
@@ -137,7 +137,7 @@ function employeeCoverage(idOrName) {
       const foundAnimalName = data.animals
       .find(animal => animal.id === animalIdResponsableFor).name;
       return foundAnimalName;
-    };
+    }
     );
     result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
   });

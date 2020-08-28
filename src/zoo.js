@@ -135,7 +135,7 @@ function employeeCoverage(idOrName) {
       const foundAnimalName = data.animals
       .find(animal => animal.id === animalIdResponsableFor).name;
       return foundAnimalName;
-    };
+    }
     );
       result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
     });

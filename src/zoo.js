@@ -101,12 +101,13 @@ function schedule(dayName) {
 }
 
 function oldestFromFirstSpecies(id) {
-  // const animalId = data.employees
-  //   .find(employee => employee.id === id)
-  //     .responsibleFor[0];
-  // return (Object.values(data.animals
-  //   .find(thisAnimal => thisAnimal.id === animalId)
-  //   .residents.reduce((acc, current) => (acc.age > current.age ? acc : current))
+  const animal1 = data
+  .employees.find(element => element.id === id).responsibleFor[0];
+  const toAnimal = data
+  .animals.find(animal => animal.id === animal1).residents;
+  const oldestAnimal = toAnimal.reduce((acc, animalAge) =>
+    (acc.age > animalAge.age ? acc : animalAge), []);
+  return Object.values(oldestAnimal);
 }
 
 function increasePrices(percentage) {

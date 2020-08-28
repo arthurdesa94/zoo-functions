@@ -137,7 +137,7 @@ function employeeCoverage(idOrName) {
       return foundAnimalName;
     });
     result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
-    });
+  });
   return result;
 }
 

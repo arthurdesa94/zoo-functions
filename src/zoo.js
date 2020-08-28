@@ -128,17 +128,17 @@ function employeeCoverage(idOrName) {
     .filter(employee =>
       employee
       .id === idOrName || employee.firstName === idOrName || employee.lastName === idOrName);
-    }
-    filteredEmployees.forEach((employee) => {
-    const mappedAnimals = employee.responsibleFor
+  }
+  filteredEmployees.forEach((employee) => {
+  const mappedAnimals = employee.responsibleFor
     .map((animalIdResponsableFor) => {
       const foundAnimalName = data.animals
       .find(animal => animal.id === animalIdResponsableFor).name;
       return foundAnimalName;
-    }
+    };
     );
-    result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
-  });
+      result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
+    });
   return result;
 }
 

@@ -68,26 +68,26 @@ function entryCalculator(entrants) {
     total + (entrants[ticketPrice] * data.prices[ticketPrice]), 0);
 }
 
-function retrieveAnimalsPerLocation(locations) {
-  const animalsPerLocation = {};
+// function retrieveAnimalsPerLocation(locations) {
+//   const animalsPerLocation = {};
 
-  locations.forEach((location) => {
-    const animals = data.animals
-    .filter(animal => animal.location === location)
-    .map(animal => animal.name);
+//   locations.forEach((location) => {
+//     const animals = data.animals
+//     .filter(animal => animal.location === location)
+//     .map(animal => animal.name);
 
-    if (animals.length !==0) animalsPerLocation(location) = animals;
-  });
-  return animalsPerLocation;
+//     if (animals.length !==0) animalsPerLocation(location) = animals;
+//   });
+//   return animalsPerLocation;
 
 function animalMap(options) {
-  const locations = ['NE', 'NW', 'SE', 'SW'];
-  if (!options) return retrieveAnimalsPerLocation(locations);
-  const includeNames = options.includeNames;
-  if (includeNames) {
-    //  pegar animais por loc e nome
-  }
-}
+//   const locations = ['NE', 'NW', 'SE', 'SW'];
+//   if (!options) return retrieveAnimalsPerLocation(locations);
+//   const includeNames = options.includeNames;
+//   if (includeNames) {
+//     //  pegar animais por loc e nome
+//   }
+// }
 }
 
 function schedule(dayName) {
@@ -116,6 +116,7 @@ function increasePrices(percentage) {
     data.prices[price] = perc(data.prices[price]);
   });
 }
+
 function employeeCoverage(idOrName) {
   const result = {};
   let filteredEmployees;
@@ -126,7 +127,7 @@ function employeeCoverage(idOrName) {
     filteredEmployees = data.employees
     .filter((employee) =>
     employee.id === idOrName ||
-    employee.name === idOrName ||
+    employee.firstName === idOrName ||
     employee.lastName === idOrName
     );
   }
@@ -138,10 +139,12 @@ function employeeCoverage(idOrName) {
       return foundAnimalName;
     }
     );
-    result['${employee.firstName} ${employee.lastName}'] = mappedAnimals;
+    result[`${employee.firstName} ${employee.lastName}`] = mappedAnimals;
   });
   return result;
 }
+
+
 
 module.exports = {
   entryCalculator,
